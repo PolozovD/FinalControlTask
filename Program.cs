@@ -19,3 +19,14 @@ string Input(string message)
     string value = Console.ReadLine();
     return value;
 }
+
+string CreateStringArray(int size)
+{
+    string newArray = new string[size];
+    for(int i = 0; i < size; i++)
+    {
+        newArray[i] = Input("Input string value of element massive: ");
+        Console.WriteLine();
+    }
+    return newArray;
+}
