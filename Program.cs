@@ -55,9 +55,19 @@ string[] CreateStringArray3SimbolMax(string[] array)
             {
                 newSizeArray[j] = newArray[j];
             }
-            newSizeArray[countString - 1] = newArray[i];
-            newSizeArray = newArray;
+            newSizeArray[countString - 1] = array[i];
+            newArray = newSizeArray;
         }
     }
     return newArray;
 }
+
+int size = Prompt("Enter the value of the array size: ");
+string[] newArray = CreateStringArray(size);
+PrintArray(newArray);
+
+Console.WriteLine();
+
+string[] myArray = CreateStringArray3SimbolMax(newArray);
+PrintArray(myArray);
+
