@@ -20,9 +20,9 @@ string Input(string message)
     return value;
 }
 
-string CreateStringArray(int size)
+string[] CreateStringArray(int size)
 {
-    string newArray = new string[size];
+    string[] newArray = new string[size];
     for(int i = 0; i < size; i++)
     {
         newArray[i] = Input("Input string value of element massive: ");
@@ -38,4 +38,26 @@ void PrintArray(string[] array)
         Console.Write(array[i] + " ");
     }
     Console.WriteLine();
+}
+
+string[] CreateStringArray3SimbolMax(string[] array)
+{
+    int countString = 0;
+    string[] newSizeArray = new string[countString];
+    string[] newArray = newSizeArray;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i].Length <= 3)
+        {
+            countString++;
+            newSizeArray = new string[countString];
+            for(int j = 0; j < countString - 1; j++)
+            {
+                newSizeArray[j] = newArray[j];
+            }
+            newSizeArray[countString - 1] = newArray[i];
+            newSizeArray = newArray;
+        }
+    }
+    return newArray;
 }
