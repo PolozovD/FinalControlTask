@@ -12,3 +12,10 @@ int Prompt(string message)
     int result = Math.Abs(Convert.ToInt32(value));
     return result;
 }
+
+string Input(string message)
+{
+    Console.WriteLine(message);
+    string value = Console.ReadLine();
+    return value;
+}
